@@ -1,0 +1,31 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发工作流
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 操作系统运行工作流
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # 检出当前的代码仓库
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # 设置 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install  # 安装项目依赖
+
+      - name: Generate static files
+        run: npx hexo generate  # 生成静态文件
+
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 GITHUB_TOKEN 进行身份验证
+        run: |
+          npx hexo deploy  # 部署静态文件到 GitHub Pages
