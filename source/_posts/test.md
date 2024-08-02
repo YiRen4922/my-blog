@@ -38,5 +38,3 @@ typora-root-url: test-image
 
 
 测试
-
-![image-20240802132036039](/image-20240802132036039.png)
