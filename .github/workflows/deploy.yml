@@ -44,6 +44,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 GITHUB_TOKEN 进行身份验证
         run: |
-          echo "machine github.com login ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
-          echo "machine api.github.com login ${{ secrets.GITHUB_TOKEN }}" >> ~/.netrc
+          echo "machine github.com login ${{ secrets.GH_TOKEN }}" > ~/.netrc
+          echo "machine api.github.com login ${{ secrets.GH_TOKEN }}" >> ~/.netrc
           npx hexo deploy  # 部署静态文件到 GitHub Pages
