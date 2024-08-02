@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4  # 设置 Node.js 环境
         with:
-          node-version: '20'  # 设置 Node.js 版本为 20.16.0
+          node-version: '20'  # 设置 Node.js 版本为 20
 
       - name: Cache node modules
         uses: actions/cache@v4  # 缓存 node_modules 以加快后续构建速度
@@ -27,10 +27,15 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Setup Hexo
-        run: npm install hexo-cli -g  # 全局安装 Hexo CLI
+        run: npm install hexo-cli@latest -g  # 全局安装最新的 Hexo CLI
 
       - name: Install dependencies
         run: npm install  # 安装项目依赖
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "YiRen4922"
+          git config --global user.email "2976784922@qq.com"
 
       - name: Generate static files
         run: npx hexo generate  # 生成静态文件
