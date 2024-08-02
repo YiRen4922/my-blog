@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # 检出当前的代码仓库
+        uses: actions/checkout@v4  # 检出当前的代码仓库
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2  # 设置 Node.js 环境
+        uses: actions/setup-node@v4  # 设置 Node.js 环境
         with:
           node-version: '20'  # 设置 Node.js 版本为 20.16.0
 
       - name: Cache node modules
-        uses: actions/cache@v2  # 缓存 node_modules 以加快后续构建速度
+        uses: actions/cache@v4  # 缓存 node_modules 以加快后续构建速度
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
