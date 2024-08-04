@@ -9,4 +9,4 @@ typora-root-url: test-image
 
 
 
-![test](image-20240802132036039.png)
+![test](\test-image\image-20240802132036039.png)
