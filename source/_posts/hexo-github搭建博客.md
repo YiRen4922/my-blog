@@ -13,19 +13,23 @@ typora-root-url: hexo-github搭建博客
 
    1. 官网：https://nodejs.org/zh-cn
 
-   2. 下载安装测试安装成功
+   2. 下载安装
 
-   3. ```shell
+   3. 测试安装成功
+      
+      ```shell
       node -v
       ```
-
+      
    4. 返回版本为成功
 
 2. npm
 
    1. 安装node时附带安装
 
-   2. ```shell
+   2. 测试安装成功
+
+      ```shell
       npm -v
       ```
 
@@ -37,10 +41,12 @@ typora-root-url: hexo-github搭建博客
 
    2. 下载安装测试安装成功
 
-   3. ```shell
+   3. 测试安装成功
+      
+      ```shell
       git -v
       ```
-
+      
    4. 返回版本为成功
 
 4. github账号
