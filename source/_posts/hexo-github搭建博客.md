@@ -254,15 +254,15 @@ typora-root-url: hexo-github搭建博客
 
       github actions在我理解中就是一个虚拟机，可以运行一些脚本命令，使得可以部署静态文件，既然是虚拟机那么访问github自然需要身份验证，可以添加密钥，也可以用token验证身份，这里采用token的方式。
 
-      ![image-20240803221954778](E:\blog\source\_posts\hexo-github搭建博客\image-20240803221954778.png)
+      ![image-20240803221954778](image-20240803221954778.png)
 
       在这里新建一个token，token的过期时间以自己选择，复制你的token，到之前在github新建的空仓库。
 
-      ![image-20240803222256032](E:\blog\source\_posts\hexo-github搭建博客\image-20240803222256032.png)
+      ![image-20240803222256032](image-20240803222256032.png)
 
       点击新建，注意名字要和github actions中的名字一样GH_TOKEN
 
-      ![image-20240803222512304](E:\blog\source\_posts\hexo-github搭建博客\image-20240803222512304.png)
+      ![image-20240803222512304](image-20240803222512304.png)
 
       至此，配置完成
 
