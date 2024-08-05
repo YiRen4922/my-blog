@@ -7,6 +7,10 @@ typora-root-url: test-image
 
 # 测试图片
 
+![test](image-20240802132036039.png)
 
+```
+你好
+asdas
+```
 
-![test](\test-image\image-20240802132036039.png)

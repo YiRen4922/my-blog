@@ -2,6 +2,7 @@
 title: hexo+github搭建博客
 date: 2024-08-02 22:27:15
 tags:
+typora-root-url: hexo-github搭建博客
 ---
 
 # hexo+Github Pages 和 actions搭建博客
@@ -83,7 +84,7 @@ tags:
 
    如下：
 
-![img](E:\blog\source\_posts\hexo-github搭建博客\QQ_1722657455049.png)
+![img](QQ_1722657455049.png)
 
 初始化成功
 
@@ -128,13 +129,13 @@ tags:
 
    将展示出来的公钥内容一字不落的复制到gihub的ssh中
 
-   ![image-20240803131346479](E:\blog\source\_posts\hexo-github搭建博客\image-20240803131346479.png)
+   ![image-20240803131346479](image-20240803131346479.png)
 
 ## github和hexo配置
 
 1. github新建仓库
 
-   ![image-20240803131815244](E:\blog\source\_posts\hexo-github搭建博客\image-20240803131815244.png)
+   ![image-20240803131815244](image-20240803131815244.png)
 
 2. hexo配置
 
@@ -144,11 +145,11 @@ tags:
       vim _config.yml
       ```
 
-      原来![img](E:\blog\source\_posts\hexo-github搭建博客\QQ_1722662611435.png)
+      原来![img](QQ_1722662611435.png)
 
       修改为（你自己的仓库地址，可从github复制）
 
-      ![img](E:\blog\source\_posts\hexo-github搭建博客\QQ_1722662678623.png)
+      ![img](QQ_1722662678623.png)
 
       ```yaml
       deploy:
@@ -159,7 +160,7 @@ tags:
 
    2. 还有添加资源地址（用来加载css等文件）
 
-      ![img](E:\blog\source\_posts\hexo-github搭建博客\QQ_1722693495529.png)
+      ![img](QQ_1722693495529.png)
 
       ```yaml
       url: https://yiren4922.github.io/my-blog
@@ -167,7 +168,7 @@ tags:
       ```
 
    3. 修改生成新博客md文档时会生成同名文件夹（用来存储博客图片）
-      ![img](E:\blog\source\_posts\hexo-github搭建博客\QQ_1722693742144.png)
+      ![img](QQ_1722693742144.png)
 
       ```yaml
       post_asset_folder: true
