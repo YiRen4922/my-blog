@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>tar命令常用方式 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="tar：常用的文件打包和压缩工具当然还有其他的工具比如zip、unzip等，这里只讲tar其他大家用到自行百度原理都是相同的。 12tar [选项] [压缩文件名] [文件或目录...]tar [选项] [压缩文件名] [文件或目录...]  常用的选项包括：  -c：创建压缩文件 -x：提取压缩文件 -z：使用 gzip 算法压缩文件 -j：使用 bzip2 算法压缩文件 -J：使用 xz 算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tar命令常用方式">
+<meta property="og:url" content="https://yiren4922.github.io/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="tar：常用的文件打包和压缩工具当然还有其他的工具比如zip、unzip等，这里只讲tar其他大家用到自行百度原理都是相同的。 12tar [选项] [压缩文件名] [文件或目录...]tar [选项] [压缩文件名] [文件或目录...]  常用的选项包括：  -c：创建压缩文件 -x：提取压缩文件 -z：使用 gzip 算法压缩文件 -j：使用 bzip2 算法压缩文件 -J：使用 xz 算法">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yiren4922.github.io/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/d6a840dc-40b9-42a0-a089-8a194346e3b3.gif">
+<meta property="article:published_time" content="2024-08-07T23:00:56.000Z">
+<meta property="article:modified_time" content="2024-09-11T14:09:13.259Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yiren4922.github.io/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/d6a840dc-40b9-42a0-a089-8a194346e3b3.gif">
+  
+    <link rel="alternate" href="/my-blog/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/my-blog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/my-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/my-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/my-blog/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/my-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/my-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/my-blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://yiren4922.github.io/my-blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-tar命令常用方式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2024-08-07T23:00:56.000Z" itemprop="datePublished">2024-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      tar命令常用方式
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="tar：常用的文件打包和压缩工具"><a href="#tar：常用的文件打包和压缩工具" class="headerlink" title="tar：常用的文件打包和压缩工具"></a><strong>tar：常用的文件打包和压缩工具</strong></h2><p>当然还有其他的工具比如zip、unzip等，这里只讲tar其他大家用到自行百度原理都是相同的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar [选项] [压缩文件名] [文件或目录...]</span><br><span class="line">tar [选项] [压缩文件名] [文件或目录...]</span><br></pre></td></tr></table></figure>
+
+<p>常用的选项包括：</p>
+<ul>
+<li><code>-c</code>：创建压缩文件</li>
+<li><code>-x</code>：提取压缩文件</li>
+<li><code>-z</code>：使用 <code>gzip</code> 算法压缩文件</li>
+<li><code>-j</code>：使用 <code>bzip2</code> 算法压缩文件</li>
+<li><code>-J</code>：使用 <code>xz</code> 算法压缩文件</li>
+<li><code>-f</code>：指定归档文件的名称</li>
+<li><code>-v</code>：显示详细的处理信息</li>
+</ul>
+<p><code>-z -j -J</code>这三种参数如何选择？如果对时间比较敏感，可以使用 <code>-z</code> 参数进行 <code>gzip</code> 压缩，虽然压缩比较低，但速度较快。而如果您对压缩比较重要，可以选择 <code>-j</code> 参数进行 <code>bzip2</code> 压缩，尽管速度较慢，但压缩比较高，如果您对压缩率要求非常高，可以选择 <code>-J</code> 参数进行 <code>xz</code> 压缩需要更长的时间。</p>
+<p>下面提供几个常见的后缀名和对应的压缩和解压命令，大家不用太过纠结命令组合，以后看见相应的后缀直接用对应的命令就行。</p>
+<ol>
+<li><code>.tar.gz 或 .tgz：</code></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -czf package.tar.gz file1.txt file2.txt directory    </span><br><span class="line">解压缩：tar -xzf package.tar.gz </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>.tar.bz2 或 .tbz2：</code></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -cjf package.tar.bz2 file1.txt file2.txt directory</span><br><span class="line">解压缩：tar -xjf package.tar.bz2     </span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><code>.tar.xz：</code></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">压缩：tar -cJf package.tar.xz file1.txt file2.txt directory</span><br><span class="line">解压缩：tar -xJf package.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>演示</p>
+<p><img src="/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/d6a840dc-40b9-42a0-a089-8a194346e3b3.gif" alt="img"></p>
+<p>还有一个特殊命令我们经常会看到<code>-C</code>是大写C他的作用是指定<code>tar</code> 命令执行时的工作目录</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yiren4922.github.io/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/" data-id="cm0xxsrn30002japc8xp3fp9n" data-title="tar命令常用方式" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/my-blog/2024/09/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/my-blog/2024/08/07/windows11%E5%AE%89%E8%A3%85wsl2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">windows11安装wsl2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2024/08/">August 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-blog/2024/09/11/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2024/08/07/tar%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%96%B9%E5%BC%8F/">tar命令常用方式</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2024/08/07/windows11%E5%AE%89%E8%A3%85wsl2/">windows11安装wsl2</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2024/08/02/hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">hexo+github搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2024/08/02/test-image/">test_image</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/my-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/my-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/my-blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/my-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/my-blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
